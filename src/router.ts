@@ -4,7 +4,7 @@ import { handleInputErrors } from "./modules/middlewares";
 
 const router = Router();
 
-//-----Product
+//=====================PRODUCT====================
 router.get("/product", (req, res) => {
   console.log("from product route");
   res.json({ message: "product" });
@@ -14,7 +14,7 @@ router.put("/product/:id", body("name"), handleInputErrors, (req, res) => {});
 router.post("/product", body("name"), handleInputErrors, (req, res) => {});
 router.delete("/product/:id", () => {});
 
-//-----Update
+//================UPDATE====================
 router.get("/update", () => {});
 router.get("/update/:id", () => {});
 router.put(
@@ -33,7 +33,7 @@ router.post(
 );
 router.delete("/update/", () => {});
 
-//-----Update-point
+//==================UPDATE POINT=====================
 router.get("/updatepoint", () => {});
 router.get("/updatepoint/:id", () => {});
 router.put(
